@@ -7,6 +7,7 @@ import {
   QueryProvider,
   PolarisProvider,
 } from "./components";
+import { ThirdwebProvider, ChainId } from "@thirdweb-dev/react";
 
 export default function App() {
   // Any .tsx or .jsx files in /pages will become a route
@@ -15,21 +16,23 @@ export default function App() {
 
   return (
     <PolarisProvider>
-      <BrowserRouter>
-        <AppBridgeProvider>
-          <QueryProvider>
-            <NavigationMenu
-              navigationLinks={[
-                {
-                  label: "Page name",
-                  destination: "/pagename",
-                },
-              ]}
-            />
-            <Routes pages={pages} />
-          </QueryProvider>
-        </AppBridgeProvider>
-      </BrowserRouter>
+      <ThirdwebProvider ChainId={ChainId.Goerli}>
+        <BrowserRouter>
+          <AppBridgeProvider>
+            <QueryProvider>
+              <NavigationMenu
+                navigationLinks={[
+                  {
+                    label: "Page name",
+                    destination: "/pagename",
+                  },
+                ]}
+              />
+              <Routes pages={pages} />
+            </QueryProvider>
+          </AppBridgeProvider>
+        </BrowserRouter>
+      </ThirdwebProvider>
     </PolarisProvider>
   );
 }

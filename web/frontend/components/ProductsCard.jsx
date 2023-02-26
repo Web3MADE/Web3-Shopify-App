@@ -8,6 +8,7 @@ import {
 } from "@shopify/polaris";
 import { Toast } from "@shopify/app-bridge-react";
 import { useAppQuery, useAuthenticatedFetch } from "../hooks";
+import { ConnectWallet } from "@thirdweb-dev/react";
 
 export function ProductsCard() {
   const emptyToastProps = { content: null };
@@ -62,10 +63,7 @@ export function ProductsCard() {
         }}
       >
         <TextContainer spacing="loose">
-          <p>
-            Sample products are created with a default title and price. You can
-            remove them at any time.
-          </p>
+          <ConnectWallet />
           <Heading element="h4">
             TOTAL PRODUCTS
             <DisplayText size="medium">
