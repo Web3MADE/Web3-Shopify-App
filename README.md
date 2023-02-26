@@ -4,6 +4,14 @@ This is a template for building a [Shopify app](https://shopify.dev/apps/getting
 
 Rather than cloning this repo, you can use your preferred package manager and the Shopify CLI with [these steps](#installing-the-template).
 
+## Web 3 Shopify App
+
+To follow along with this tutorial, make sure to select ***main*** branch from the available branches:
+
+![Screenshot 2023-02-26 at 19 48 49](https://user-images.githubusercontent.com/115392932/221433459-c105b339-bf15-4892-879b-685e50d971b6.png)
+
+This repo demonstrates how to integrate Web 3 functionality into the latest Shopify Node template. 
+
 ## Benefits
 
 Shopify apps are built on a variety of Shopify tools to create a great merchant experience. The [create an app](https://shopify.dev/apps/getting-started/create) tutorial in our developer documentation will guide you through creating a Shopify app using this template.
